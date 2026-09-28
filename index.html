@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official academic portal for the Department of Computer Applications (BCA) - Access Semesters 1 to 8 notes, previous year questions (PYQ), syllabus, faculty directory, and announcements.">
+  <title>Department of Computer Applications | BCA Academic Portal</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f172a%22/><text y=%2265%22 x=%2250%22 font-size=%2250%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>B</text></svg>">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar / Accreditation Notice -->
+  <aside class="top-notice-bar" aria-label="Institutional accreditation and highlights">
+    <div class="container">
+      <div class="top-notice-content">
+        <div class="top-notice-item">
+          <span class="top-notice-pill">Accreditation</span>
+          <span>NBA Accredited | NAAC 'A+' Grade University Department</span>
+        </div>
+        <div class="top-notice-item" style="gap: 1rem;">
+          <span>📞 Admissions & Office: +91 (0) 11-2856-4321</span>
+          <span>📍 Computing Sciences Block, 3rd Floor</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Sticky Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary Navigation">
+        <!-- Department Branding -->
+        <a href="#home" class="brand-wrapper">
+          <div class="brand-logo-icon" aria-hidden="true">BCA</div>
+          <div class="brand-meta">
+            <span class="brand-title">Department of Computer Applications</span>
+            <span class="brand-subtitle">State University of Technology & Sciences</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="#home" class="nav-link is-active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+          <li role="none"><a href="#semesters" class="nav-link" role="menuitem">Semesters 1–8</a></li>
+          <li role="none"><a href="#notes" class="nav-link" role="menuitem">Notes</a></li>
+          <li role="none"><a href="#pyqs" class="nav-link" role="menuitem">PYQs</a></li>
+          <li role="none"><a href="#faculty" class="nav-link" role="menuitem">Faculty</a></li>
+          <li role="none"><a href="#syllabus" class="nav-link" role="menuitem">Syllabus</a></li>
+          <li role="none"><a href="#announcements" class="nav-link" role="menuitem">Announcements</a></li>
+          <li role="none"><a href="#resources" class="nav-link" role="menuitem">Resources</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        </ul>
+
+        <!-- Nav Right Actions: Search & Admin & Mobile Toggle -->
+        <div class="nav-actions">
+          <button class="search-trigger-btn" data-action="open-search" title="Search all resources (Ctrl+K)" aria-label="Open Search">
+            <span>🔍 Search</span>
+            <kbd class="kbd-shortcut">Ctrl K</kbd>
+          </button>
+
+          <a href="#admin" class="btn btn-sm btn-outline" style="display: none; @media(min-width: 768px){display:inline-flex;}">
+            ⚙ Admin
+          </a>
+
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span style="font-size: 1.25rem; line-height: 1;">☰</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div style="font-weight: 700; color: var(--primary-navy);">BCA Department Menu</div>
+      <button class="modal-close-btn" id="mobile-drawer-close" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link is-active">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Department</a></li>
+      <li><a href="#semesters" class="mobile-nav-link">Semesters 1–8</a></li>
+      <li><a href="#notes" class="mobile-nav-link">Lecture Notes</a></li>
+      <li><a href="#pyqs" class="mobile-nav-link">Previous Year Questions</a></li>
+      <li><a href="#faculty" class="mobile-nav-link">Faculty Members</a></li>
+      <li><a href="#syllabus" class="mobile-nav-link">Syllabus</a></li>
+      <li><a href="#announcements" class="mobile-nav-link">Announcements</a></li>
+      <li><a href="#resources" class="mobile-nav-link">Student Resources</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact Us</a></li>
+      <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-light);">
+        <a href="#admin" class="mobile-nav-link" style="color: var(--primary-blue); font-weight: 600;">⚙ Admin Dashboard</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MAIN APPLICATION CONTENT CONTAINER -->
+  <main id="main-content">
+
+    <!-- =========================================================
+         SECTION 1: HOME PAGE (Agent 2)
+         ========================================================= -->
+    <section id="section-home" class="app-section is-active" aria-labelledby="hero-dept-name">
+      <!-- Hero Header -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>🏛️</span>
+              <span>Premier 4-Year Bachelor of Computer Applications Curriculum</span>
+            </div>
+            <h1 class="hero-title" id="hero-dept-name">Department of Computer Applications</h1>
+            <p class="hero-tagline" id="hero-tagline">Empowering Future Software Engineers & Computational Leaders</p>
+            <p class="hero-description" id="hero-intro">
+              The Department of Computer Applications offers a comprehensive curriculum combining foundational algorithms, modern software engineering, artificial intelligence, cloud architectures, and hands-on laboratory experiences to prepare students for top technology careers.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#semesters" class="btn btn-primary btn-lg">Explore Courses & Semesters →</a>
+              <a href="#notes" class="btn btn-secondary btn-lg">View Lecture Notes</a>
+              <button class="btn btn-outline btn-lg" data-action="open-search">Search Resources</button>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="stats-strip">
+              <div class="stat-card">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Full Semesters (NEP)</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">38+</span>
+                <span class="stat-label">Core & Elective Courses</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Faculty Members</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">94.8%</span>
+                <span class="stat-label">Placement Record</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Access Hub -->
+      <div class="container" style="padding-top: var(--space-10); padding-bottom: var(--space-8);">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Portals</span>
+          <h2 class="section-title">Quick Access Hub</h2>
+          <p class="section-subtitle">Jump directly to academic course materials, previous examination archives, or departmental notices.</p>
+        </div>
+
+        <div class="quick-access-grid">
+          <a href="#notes" class="qa-card">
+            <div class="qa-icon-wrapper">📚</div>
+            <div class="qa-title">Semester Notes</div>
+            <div class="qa-description">Curated lecture notes, unit summaries, and code repositories across all 8 semesters.</div>
+          </a>
+          <a href="#pyqs" class="qa-card">
+            <div class="qa-icon-wrapper">📝</div>
+            <div class="qa-title">PYQ Archive</div>
+            <div class="qa-description">End-semester and mid-term examination question papers from 2021 to 2025.</div>
+          </a>
+          <a href="#faculty" class="qa-card">
+            <div class="qa-icon-wrapper">👨‍🏫</div>
+            <div class="qa-title">Faculty Members</div>
+            <div class="qa-description">Profiles, research specializations, office hours, and contact details of our professors.</div>
+          </a>
+          <a href="#syllabus" class="qa-card">
+            <div class="qa-icon-wrapper">📋</div>
+            <div class="qa-title">Detailed Syllabus</div>
+            <div class="qa-description">Subject codes, unit breakdowns, reference textbooks, and credit distributions.</div>
+          </a>
+          <a href="#announcements" class="qa-card">
+            <div class="qa-icon-wrapper">📢</div>
+            <div class="qa-title">Announcements</div>
+            <div class="qa-description">Official examination timetables, seminar notices, hackathons, and departmental circulars.</div>
+          </a>
+          <a href="#resources" class="qa-card">
+            <div class="qa-icon-wrapper">💡</div>
+            <div class="qa-title">Student Resources</div>
+            <div class="qa-description">Academic calendar, laboratory manuals, capstone IEEE guidelines, and coding packs.</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Department Highlights -->
+      <div style="background-color: var(--color-surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: var(--space-10) 0;">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Excellence In Education</span>
+            <h2 class="section-title">Department Highlights</h2>
+            <p class="section-subtitle">Dedicated to academic rigor, experiential laboratory training, and industry-aligned skill building.</p>
+          </div>
+
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <span style="font-size: 1.75rem;">👨‍🏫</span>
+              <h4>Dedicated Faculty</h4>
+              <p style="font-size: 0.875rem;">Guidance by qualified faculty members dedicated to classroom teaching, laboratory learning, and student mentorship.</p>
+            </div>
+            <div class="highlight-card">
+              <span style="font-size: 1.75rem;">📖</span>
+              <h4>Study Resources</h4>
+              <p style="font-size: 0.875rem;">Free, high-quality, unit-wise notes, source code examples, and algorithm step-by-step guides available anytime.</p>
+            </div>
+            <div class="highlight-card">
+              <span style="font-size: 1.75rem;">📑</span>
+              <h4>Previous Year Questions</h4>
+              <p style="font-size: 0.875rem;">Verified repository of past examination papers to help students understand question patterns and mark distributions.</p>
+            </div>
+            <div class="highlight-card">
+              <span style="font-size: 1.75rem;">💻</span>
+              <h4>Academic Support</h4>
+              <p style="font-size: 0.875rem;">Dedicated computer laboratories with Linux workstations, cloud compute credits, and peer coding clubs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latest Announcements on Home Page -->
+      <div class="container" style="padding-top: var(--space-10); padding-bottom: var(--space-10);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-6); flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-eyebrow">Recent Circulars</span>
+            <h2 class="section-title">Latest Announcements</h2>
+          </div>
+          <a href="#announcements" class="btn btn-outline btn-sm">View All Announcements →</a>
+        </div>
+
+        <div id="home-announcements-list" style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: ABOUT DEPARTMENT
+         ========================================================= -->
+    <section id="section-about" class="app-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Institutional Overview</span>
+          <h1 class="section-title" id="about-title">About Department of Computer Applications</h1>
+          <p class="section-subtitle">Fostering excellence in computational sciences, software architecture, and ethical computing since 2004.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-8); margin-bottom: var(--space-10); @media(min-width: 1024px){grid-template-columns: 2fr 1fr;}">
+          <div>
+            <h3 style="margin-bottom: var(--space-3);">Vision & Mission</h3>
+            <div class="card" style="margin-bottom: var(--space-6);">
+              <h4 style="color: var(--primary-blue); margin-bottom: var(--space-2);">Department Vision</h4>
+              <p>To be a nationally recognized center of undergraduate education and applied innovation in Computer Applications, producing software innovators and researchers committed to technological excellence and societal betterment.</p>
+            </div>
+
+            <div class="card">
+              <h4 style="color: var(--primary-blue); margin-bottom: var(--space-2);">Department Mission</h4>
+              <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+                <li>Provide a robust academic environment that balances theoretical computer science with agile industry practices.</li>
+                <li>Equip students with strong algorithmic problem solving, software engineering, and artificial intelligence capabilities.</li>
+                <li>Encourage collaborative research, hackathons, open-source development, and entrepreneurial ventures.</li>
+                <li>Instill ethical leadership, cyber safety awareness, and lifelong learning attitudes in all graduates.</li>
+              </ul>
+            </div>
+
+            <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-3);">Laboratory Infrastructure</h3>
+            <p>Our department houses three state-of-the-art computing laboratories equipped with dual-boot Linux/Windows workstations, gigabit local networking, and cloud access to AWS Educate and Azure Dev Tools.</p>
+            <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-4); @media(min-width: 640px){grid-template-columns: repeat(2, 1fr);}">
+              <div class="card">
+                <strong>Lab 1: Software Systems & Web Engineering</strong>
+                <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">Node.js, Python, Java, Docker, and full stack development environments.</p>
+              </div>
+              <div class="card">
+                <strong>Lab 2: AI & Data Engineering</strong>
+                <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">GPU-accelerated systems for machine learning, PyTorch, Scikit-learn, and database clustering.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOD Message Card Container -->
+          <div id="about-hod-card">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: SEMESTERS 1 - 8 (Agent 3)
+         ========================================================= -->
+    <section id="section-semesters" class="app-section" aria-labelledby="semesters-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Curriculum</span>
+          <h1 class="section-title" id="semesters-title">Semesters 1 through 8</h1>
+          <p class="section-subtitle">Select any semester to explore enrolled subjects, subject codes, unit topics, and direct links to notes and PYQs.</p>
+        </div>
+
+        <!-- Semester Switcher 1 to 8 -->
+        <nav class="semester-tabs" id="semester-tab-buttons" aria-label="Select Semester">
+          <!-- Populated by JS -->
+        </nav>
+
+        <!-- Active Semester Meta -->
+        <div id="semester-meta-banner">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Subjects Grid -->
+        <div class="subjects-grid" id="semester-subjects-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: NOTES (Agent 4)
+         ========================================================= -->
+    <section id="section-notes" class="app-section" aria-labelledby="notes-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Study Materials</span>
+          <h1 class="section-title" id="notes-title">Department Lecture Notes</h1>
+          <p class="section-subtitle">Filter notes by semester, subject, and topic keywords. Download or preview study materials directly in your browser.</p>
+        </div>
+
+        <!-- Three-Tier Filter Bar -->
+        <div class="filter-bar">
+          <div class="form-group" style="flex: 1 1 140px;">
+            <label class="form-label" for="notes-filter-sem">Semester</label>
+            <select class="form-select" id="notes-filter-sem">
+              <option value="all">All Semesters</option>
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+              <option value="3">Semester 3</option>
+              <option value="4">Semester 4</option>
+              <option value="5">Semester 5</option>
+              <option value="6">Semester 6</option>
+              <option value="7">Semester 7</option>
+              <option value="8">Semester 8</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 2 1 220px;">
+            <label class="form-label" for="notes-filter-subject">Subject</label>
+            <select class="form-select" id="notes-filter-subject">
+              <option value="all">All Subjects</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 2 1 220px;">
+            <label class="form-label" for="notes-filter-search">Search Topic</label>
+            <input type="search" class="form-control" id="notes-filter-search" placeholder="e.g. Pointers, AVL Trees, SQL, Docker...">
+          </div>
+
+          <div style="display: flex; align-items: flex-end; gap: 0.5rem; margin-top: auto; padding-bottom: 2px;">
+            <button class="btn btn-sm btn-primary" id="notes-view-cards" title="Grid Card View">Card View</button>
+            <button class="btn btn-sm btn-outline" id="notes-view-table" title="Table View">Table View</button>
+          </div>
+        </div>
+
+        <!-- Notes Status Strip -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4);">
+          <span id="notes-count-badge" class="badge badge-neutral">Loading notes...</span>
+        </div>
+
+        <!-- Notes Content Container -->
+        <div id="notes-display-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: PREVIOUS YEAR QUESTIONS (Agent 5)
+         ========================================================= -->
+    <section id="section-pyqs" class="app-section" aria-labelledby="pyqs-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Examination Archive</span>
+          <h1 class="section-title" id="pyqs-title">Previous Year Question Papers (PYQ)</h1>
+          <p class="section-subtitle">Search, inspect and download official past semester question papers to prepare for mid-term and end-term exams.</p>
+        </div>
+
+        <!-- PYQ Multi-Criteria Filter Bar -->
+        <div class="filter-bar">
+          <div class="form-group" style="flex: 1 1 120px;">
+            <label class="form-label" for="pyq-filter-sem">Semester</label>
+            <select class="form-select" id="pyq-filter-sem">
+              <option value="all">All Semesters</option>
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+              <option value="3">Semester 3</option>
+              <option value="4">Semester 4</option>
+              <option value="5">Semester 5</option>
+              <option value="6">Semester 6</option>
+              <option value="7">Semester 7</option>
+              <option value="8">Semester 8</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 2 1 200px;">
+            <label class="form-label" for="pyq-filter-subject">Subject</label>
+            <select class="form-select" id="pyq-filter-subject">
+              <option value="all">All Subjects</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 1 1 120px;">
+            <label class="form-label" for="pyq-filter-year">Year</label>
+            <select class="form-select" id="pyq-filter-year">
+              <option value="all">All Years</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="flex: 1 1 140px;">
+            <label class="form-label" for="pyq-filter-type">Exam Type</label>
+            <select class="form-select" id="pyq-filter-type">
+              <option value="all">All Types</option>
+              <option value="End-Semester">End-Semester</option>
+              <option value="Mid-Semester">Mid-Semester</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Count Indicator -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4);">
+          <span id="pyq-count-badge" class="badge badge-neutral">Loading question papers...</span>
+        </div>
+
+        <!-- PYQs Grid -->
+        <div id="pyq-display-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 6: FACULTY MEMBERS (Agent 6)
+         ========================================================= -->
+    <section id="section-faculty" class="app-section" aria-labelledby="faculty-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Staff</span>
+          <h1 class="section-title" id="faculty-title">Faculty Members</h1>
+          <p class="section-subtitle">Faculty members of the BCA Department contributing to teaching, learning, and academic development.</p>
+        </div>
+
+        <!-- Search Faculty -->
+        <div class="filter-bar" style="margin-bottom: var(--space-6);">
+          <div class="form-group" style="flex: 1 1 300px;">
+            <label class="form-label" for="faculty-search-input">Search Faculty</label>
+            <input type="search" class="form-control" id="faculty-search-input" placeholder="Search faculty by name, designation, or qualification...">
+          </div>
+        </div>
+
+        <!-- Faculty Responsive Grid -->
+        <div class="faculty-grid" id="faculty-display-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 7: SYLLABUS (Agent 7)
+         ========================================================= -->
+    <section id="section-syllabus" class="app-section" aria-labelledby="syllabus-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Course Curriculum</span>
+          <h1 class="section-title" id="syllabus-title">Official Department Syllabus</h1>
+          <p class="section-subtitle">Prescribed unit-wise outlines, lecture credits, and textbook recommendations for Semesters 1 to 8.</p>
+        </div>
+
+        <!-- Semester Switcher for Syllabus -->
+        <nav class="semester-tabs" id="syllabus-sem-tabs" aria-label="Select Syllabus Semester">
+          <!-- Populated by JS -->
+        </nav>
+
+        <!-- Syllabus Display Container -->
+        <div id="syllabus-display-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 8: ANNOUNCEMENTS (Agent 8)
+         ========================================================= -->
+    <section id="section-announcements" class="app-section" aria-labelledby="ann-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Notice Board</span>
+          <h1 class="section-title" id="ann-title">Department Announcements & Circulars</h1>
+          <p class="section-subtitle">Stay updated on exam timetables, assessment schedules, departmental events, and academic notices.</p>
+        </div>
+
+        <!-- Category & Priority Filters -->
+        <div class="filter-bar">
+          <div class="form-group" style="flex: 1 1 200px;">
+            <label class="form-label" for="ann-filter-category">Filter Category</label>
+            <select class="form-select" id="ann-filter-category">
+              <option value="all">All Categories</option>
+              <option value="Examination Notice">Examination Notice</option>
+              <option value="Internal Assessment">Internal Assessment</option>
+              <option value="Assignment">Assignment</option>
+              <option value="Department Event">Department Event</option>
+              <option value="Seminar">Seminar</option>
+              <option value="Workshop">Workshop</option>
+              <option value="Holiday">Holiday</option>
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: auto; padding-bottom: 8px;">
+            <input type="checkbox" id="ann-filter-important" style="width: 18px; height: 18px; cursor: pointer;">
+            <label for="ann-filter-important" style="font-size: 0.875rem; font-weight: 500; cursor: pointer;">Show Important Only</label>
+          </div>
+        </div>
+
+        <!-- Announcements Feed -->
+        <div class="announcements-list" id="announcements-display-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 9: STUDENT RESOURCES
+         ========================================================= -->
+    <section id="section-resources" class="app-section" aria-labelledby="resources-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Kit</span>
+          <h1 class="section-title" id="resources-title">Student Academic Resources</h1>
+          <p class="section-subtitle">Download official templates, laboratory manuals, academic calendars, and explore recommended coding platforms.</p>
+        </div>
+
+        <div class="resource-grid" id="resources-display-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 10: CONTACT US
+         ========================================================= -->
+    <section id="section-contact" class="app-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Reach Out</span>
+          <h1 class="section-title" id="contact-title">Contact the Department</h1>
+          <p class="section-subtitle">Have questions regarding courses, admission guidelines, or academic records? Our department office is here to help.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-8); @media(min-width: 768px){grid-template-columns: 1fr 1fr;}">
+          <!-- Contact Details Card -->
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Department Office</h3>
+            <p style="margin-bottom: 1.5rem;">
+              <strong>Department of Computer Applications</strong><br>
+              Computing Sciences Block (CSB), 3rd Floor<br>
+              State University of Technology & Sciences<br>
+              University Enclave, Tech District
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; margin-bottom: 1.5rem;">
+              <div>📧 <strong>Official Email:</strong> <a href="mailto:bca.department@university.edu">bca.department@university.edu</a></div>
+              <div>📞 <strong>Office Phone:</strong> +91 (0) 11-2856-4321</div>
+              <div>🕒 <strong>Office Hours:</strong> Monday – Friday: 09:00 AM – 05:00 PM</div>
+              <div>🚪 <strong>HOD Office:</strong> Mrs. Prakriti Pradhan (Professor & HOD)</div>
+            </div>
+
+            <div style="background-color: var(--color-surface); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); font-size: 0.8125rem;">
+              <strong>Student Counseling & Grievance Hours:</strong><br>
+              Tuesdays & Thursdays: 02:30 PM – 04:30 PM (CSB-308)
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Send an Inquiry</h3>
+            <form id="contact-inquiry-form" style="display: flex; flex-direction: column; gap: var(--space-4);">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name</label>
+                <input type="text" class="form-control" id="contact-name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="name@domain.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-sem">Current Semester (Optional)</label>
+                <select class="form-select" id="contact-sem">
+                  <option value="">Prospective Student / General Public</option>
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6</option>
+                  <option value="7">Semester 7</option>
+                  <option value="8">Semester 8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-msg">Message / Inquiry</label>
+                <textarea class="form-control" id="contact-msg" rows="4" placeholder="How can the department assist you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 11: ADMIN PANEL (Agent 11)
+         ========================================================= -->
+    <section id="section-admin" class="app-section" aria-labelledby="admin-title">
+      <div class="container">
+        <!-- Admin Strip -->
+        <div class="admin-header-strip">
+          <div>
+            <h2 style="color: #FFFFFF; font-size: 1.5rem; margin-bottom: 0.25rem;" id="admin-title">Department Admin Portal</h2>
+            <p style="color: #94A3B8; font-size: 0.875rem; margin-bottom: 0;">Manage academic staff, lecture notes, PYQs, and announcements. Changes persist in local storage.</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-sm btn-secondary" id="admin-export-data-btn">Export Data Backup</button>
+            <button class="btn btn-sm btn-danger" id="admin-reset-data-btn">Reset Factory Defaults</button>
+          </div>
+        </div>
+
+        <!-- Admin Tabs -->
+        <div class="admin-tabs" role="tablist">
+          <button class="admin-tab-btn is-active" data-pane="faculty" role="tab">Faculty Directory</button>
+          <button class="admin-tab-btn" data-pane="notes" role="tab">Notes Management</button>
+          <button class="admin-tab-btn" data-pane="pyqs" role="tab">PYQ Archive</button>
+          <button class="admin-tab-btn" data-pane="announcements" role="tab">Announcements</button>
+        </div>
+
+        <!-- PANE 1: FACULTY MANAGEMENT -->
+        <div class="admin-pane is-active" id="admin-pane-faculty">
+          <!-- Add Faculty Card -->
+          <div class="admin-card">
+            <h4 style="margin-bottom: var(--space-4);">Add New Faculty Member</h4>
+            <form id="admin-add-faculty-form" class="admin-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="fac-input-name">Full Name with Title</label>
+                <input type="text" class="form-control" id="fac-input-name" placeholder="e.g. Dr. Ramesh Kumar" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fac-input-designation">Designation</label>
+                <select class="form-select" id="fac-input-designation">
+                  <option value="Professor">Professor</option>
+                  <option value="Associate Professor">Associate Professor</option>
+                  <option value="Assistant Professor" selected>Assistant Professor</option>
+                  <option value="Visiting Faculty">Visiting Faculty</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fac-input-qualification">Qualification</label>
+                <input type="text" class="form-control" id="fac-input-qualification" placeholder="e.g. Ph.D. in Computer Science" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fac-input-specialization">Research Specialization</label>
+                <input type="text" class="form-control" id="fac-input-specialization" placeholder="e.g. Cloud Computing & Big Data" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fac-input-email">Official Email</label>
+                <input type="email" class="form-control" id="fac-input-email" placeholder="faculty@university.edu" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fac-input-room">Office Room / Lab</label>
+                <input type="text" class="form-control" id="fac-input-room" placeholder="e.g. CSB-310">
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="fac-input-bio">Short Biography</label>
+                <textarea class="form-control" id="fac-input-bio" rows="2" placeholder="Brief summary of academic background and teaching focus"></textarea>
+              </div>
+              <div class="admin-form-full">
+                <button type="submit" class="btn btn-primary">Save Faculty Member</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Existing Faculty Table -->
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Faculty Name</th>
+                  <th>Designation</th>
+                  <th>Specialization</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-faculty-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANE 2: NOTES MANAGEMENT -->
+        <div class="admin-pane" id="admin-pane-notes">
+          <div class="admin-card">
+            <h4 style="margin-bottom: var(--space-4);">Add Lecture Note</h4>
+            <form id="admin-add-note-form" class="admin-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="admin-note-sem">Semester</label>
+                <select class="form-select" id="admin-note-sem">
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6</option>
+                  <option value="7">Semester 7</option>
+                  <option value="8">Semester 8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="admin-note-subject">Subject</label>
+                <select class="form-select" id="admin-note-subject"></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="note-input-title">Note Title</label>
+                <input type="text" class="form-control" id="note-input-title" placeholder="e.g. Graph Algorithms & Dijkstra's Method" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="note-input-topic">Topic / Unit</label>
+                <input type="text" class="form-control" id="note-input-topic" placeholder="e.g. Unit 3: Shortest Paths" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="note-input-author">Author / Faculty</label>
+                <input type="text" class="form-control" id="note-input-author" placeholder="e.g. Prof. Rajesh Verma">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="note-input-size">File Size</label>
+                <input type="text" class="form-control" id="note-input-size" placeholder="2.4 MB">
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="note-input-summary">Summary Overview</label>
+                <textarea class="form-control" id="note-input-summary" rows="2" placeholder="Brief outline of concepts covered in this note"></textarea>
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="note-input-sample">Study Material / Text Content</label>
+                <textarea class="form-control" id="note-input-sample" rows="4" placeholder="Detailed lecture notes, code snippets, or revision points"></textarea>
+              </div>
+              <div class="admin-form-full">
+                <button type="submit" class="btn btn-primary">Upload & Publish Note</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sem</th>
+                  <th>Subject</th>
+                  <th>Title</th>
+                  <th>Topic</th>
+                  <th>Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-notes-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANE 3: PYQ MANAGEMENT -->
+        <div class="admin-pane" id="admin-pane-pyqs">
+          <div class="admin-card">
+            <h4 style="margin-bottom: var(--space-4);">Upload Previous Year Question Paper</h4>
+            <form id="admin-add-pyq-form" class="admin-form-grid">
+              <div class="form-group">
+                <label class="form-label" for="admin-pyq-sem">Semester</label>
+                <select class="form-select" id="admin-pyq-sem">
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6</option>
+                  <option value="7">Semester 7</option>
+                  <option value="8">Semester 8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="admin-pyq-subject">Subject</label>
+                <select class="form-select" id="admin-pyq-subject"></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pyq-input-year">Exam Year</label>
+                <input type="number" class="form-control" id="pyq-input-year" value="2025" min="2018" max="2030" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pyq-input-type">Exam Type</label>
+                <select class="form-select" id="pyq-input-type">
+                  <option value="End-Semester">End-Semester</option>
+                  <option value="Mid-Semester">Mid-Semester</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pyq-input-marks">Total Marks</label>
+                <input type="number" class="form-control" id="pyq-input-marks" value="75">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pyq-input-duration">Exam Duration</label>
+                <input type="text" class="form-control" id="pyq-input-duration" value="3 Hours">
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="pyq-input-q1">Section A Sample Question</label>
+                <input type="text" class="form-control" id="pyq-input-q1" placeholder="Question 1 (Compulsory theoretical short questions)">
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="pyq-input-q2">Section B Sample Question</label>
+                <input type="text" class="form-control" id="pyq-input-q2" placeholder="Question 2 (Long algorithmic and design questions)">
+              </div>
+              <div class="admin-form-full">
+                <button type="submit" class="btn btn-primary">Publish Question Paper</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sem</th>
+                  <th>Course Code & Title</th>
+                  <th>Year</th>
+                  <th>Exam Type</th>
+                  <th>Max Marks</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-pyq-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANE 4: ANNOUNCEMENTS MANAGEMENT -->
+        <div class="admin-pane" id="admin-pane-announcements">
+          <div class="admin-card">
+            <h4 style="margin-bottom: var(--space-4);">Post New Announcement</h4>
+            <form id="admin-add-ann-form" class="admin-form-grid">
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="ann-input-title">Announcement Title</label>
+                <input type="text" class="form-control" id="ann-input-title" placeholder="e.g. Schedule for Mid-Term Assessment 2" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ann-input-category">Category</label>
+                <select class="form-select" id="ann-input-category">
+                  <option value="Examination Notice">Examination Notice</option>
+                  <option value="Internal Assessment">Internal Assessment</option>
+                  <option value="Assignment">Assignment</option>
+                  <option value="Department Event">Department Event</option>
+                  <option value="Seminar">Seminar</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Holiday">Holiday</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ann-input-date">Date</label>
+                <input type="date" class="form-control" id="ann-input-date">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ann-input-author">Issuer / Author</label>
+                <input type="text" class="form-control" id="ann-input-author" placeholder="e.g. Office of Controller of Exams">
+              </div>
+              <div class="form-group admin-form-full" style="flex-direction: row; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" id="ann-input-important" style="width: 18px; height: 18px;">
+                <label for="ann-input-important" style="font-size: 0.875rem; font-weight: 600; cursor: pointer;">Flag as Important / Urgent Notice</label>
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="ann-input-desc">Short Summary (Visible in cards)</label>
+                <textarea class="form-control" id="ann-input-desc" rows="2" placeholder="Brief summary of the notice" required></textarea>
+              </div>
+              <div class="form-group admin-form-full">
+                <label class="form-label" for="ann-input-details">Full Circular Details</label>
+                <textarea class="form-control" id="ann-input-details" rows="4" placeholder="Detailed circular content, instructions, and timings"></textarea>
+              </div>
+              <div class="admin-form-full">
+                <button type="submit" class="btn btn-primary">Publish Announcement</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Issuer</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-ann-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       INSTITUTIONAL FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Accreditation -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <div class="brand-logo-icon" style="width: 36px; height: 36px; font-size: 0.9rem;">BCA</div>
+            <div>
+              <strong style="color: var(--text-main); font-size: 1rem;">Department of Computer Applications</strong>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">State University of Technology & Sciences</div>
+            </div>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem;">
+            Delivering high-caliber computational training, algorithmic mastery, and applied engineering education aligned with contemporary computing industry standards.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-neutral">NBA Accredited</span>
+            <span class="badge badge-neutral">NAAC 'A+' Grade</span>
+            <span class="badge badge-neutral">NEP-2020 Aligned</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Academic Resources -->
+        <div>
+          <div class="footer-col-title">Academics</div>
+          <ul class="footer-links">
+            <li><a href="#semesters">Semesters 1 to 8</a></li>
+            <li><a href="#notes">Lecture Notes Repository</a></li>
+            <li><a href="#pyqs">Previous Year Questions</a></li>
+            <li><a href="#syllabus">Course Curriculum</a></li>
+            <li><a href="#resources">Laboratory Manuals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div>
+          <div class="footer-col-title">Department</div>
+          <ul class="footer-links">
+            <li><a href="#about">About the Department</a></li>
+            <li><a href="#faculty">Faculty Profiles</a></li>
+            <li><a href="#announcements">Circulars & Notices</a></li>
+            <li><a href="#contact">Contact & Office Hours</a></li>
+            <li><a href="#admin">Admin Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div>
+          <div class="footer-col-title">Office Information</div>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.5rem;">
+            Computing Sciences Block, 3rd Floor<br>
+            State University Campus, Tech District<br>
+            Mon – Fri: 09:00 AM – 05:00 PM
+          </p>
+          <div style="font-size: 0.8125rem;">
+            <a href="mailto:bca.department@university.edu" style="font-weight: 500;">bca.department@university.edu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Department of Computer Applications. All Rights Reserved.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#about">Privacy Policy</a>
+          <a href="#about">Terms of Use</a>
+          <a href="#contact">Academic Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL 1: GLOBAL SEARCH MODAL (Agent 9)
+       ========================================================= -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-label" aria-hidden="true">
+    <div class="modal-container modal-lg">
+      <div class="search-modal-input-wrapper">
+        <span style="font-size: 1.25rem; color: var(--text-muted);">🔍</span>
+        <input type="text" class="search-modal-input" id="search-modal-input" placeholder="Search notes, subjects, PYQs, faculty, announcements..." aria-label="Search department portal">
+        <button class="modal-close-btn" aria-label="Close Search">&times;</button>
+      </div>
+      <div class="search-results-container" id="search-results-list">
+        <!-- Results rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 2: RESOURCE PREVIEW MODAL (Notes / PYQ / Syllabus)
+       ========================================================= -->
+  <div class="modal-backdrop" id="preview-modal" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title" aria-hidden="true">
+    <div class="modal-container modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="preview-modal-title">Resource Preview</h3>
+        <button class="modal-close-btn" aria-label="Close Preview">&times;</button>
+      </div>
+      <div class="modal-body" id="preview-modal-body">
+        <!-- Populated dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Close</button>
+        <button class="btn btn-primary" id="preview-modal-download">Download Resource</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       TOAST NOTIFICATIONS CONTAINER
+       ========================================================= -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Core Modular Application Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
